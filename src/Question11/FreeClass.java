@@ -36,5 +36,10 @@ public class FreeClass
 		this.name = name;
 		this.lecturer = lecturer;
 	}
+	
+	public void info()
+	{
+		System.out.println("父类");
+	}
 
 }

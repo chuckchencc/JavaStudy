@@ -24,7 +24,7 @@ public class Question11
 		// 请写两个类来描述它们。
 		
 		PaidClass pc1 = new PaidClass(10086,"数学","张三");
-		//PaidClass pc2 = new PaidClass();
+		
 		int id = pc1.id;
 		String name = pc1.name;
 		String lecturer = pc1.lecturer;
@@ -44,6 +44,13 @@ public class Question11
 		System.out.println("QQ群号：" + QQnumber);
 		System.out.println("辅导老师姓名：" + teacher);
 
+		
+		FreeClass pc2 = pc1;//隐式转换，PaidClass->FreeClass，子类转父类
+		PaidClass pc3 = (PaidClass)pc2;//显式转换，FreeClass->PaidClass，父类转子类
+		pc2.info();//多态表现，pc1是子类对象，pc2隐式转换为父类对象，但是调用的方法在子类中被重写了，因此最终调用子类中的方法
+		pc2.id=1000;
+		int a = pc3.id;
+		System.out.println(a);
 	}
 
 }

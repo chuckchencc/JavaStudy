@@ -46,7 +46,7 @@ public class PaidClass extends FreeClass
 		// TODO Auto-generated constructor stub
 	}
 
-	//构造方法继承
+	//构造方法重载
 	public PaidClass(int id, String name, String lecturer)
 	{
 		super(id, name, lecturer);
@@ -55,5 +55,14 @@ public class PaidClass extends FreeClass
 		this.teacher = "李四";
 		// TODO Auto-generated constructor stub
 	}
+	
+	//方法重写
+	@Override
+	public void info()
+	{
+		System.out.println("子类");
+	}
+	
+
 
 }
